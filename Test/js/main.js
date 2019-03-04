@@ -6,27 +6,47 @@ class Worker{
 		this.hours = hours;
 	}
 	getSalary(){
-		console.log((this.hourRate * this.hour));
+		return (this.hourRate * this.hours);
 	}
+	getName(){
+		return this.name;
+	}
+	getSurName(){
+		return this.surname;
+	}
+	getHourRate(){
+		return this.hourRate;
+	}
+	getHours(){
+		return this.hours;
+	}
+
 	
 
 }
-let worker = new Worker('Ion', 'Creangă', 10, 176); 
+let worker1 = new Worker('Mihai', 'Crihan', 24, 220); 
+console.log(worker1.name); 
+console.log(worker1.surname); 
+console.log(worker1.hourRate); 
+console.log(worker1.hours); 
+console.log(worker1.getSalary());
 
-console.log(worker.name); //afișează 'Ion' 
-console.log(worker.surname); //afișează 'Creangă' 
-console.log(worker.hourRate); //afișează 10 
-console.log(worker.hours); //afișează 31 
-console.log(worker.getSalary()); //afișează 1760 = 10*176
+let worker2 = new Worker('Petru', 'Faranume', 8, 80); 
+console.log(worker2.name); 
+console.log(worker2.surname); 
+console.log(worker2.hourRate); 
+console.log(worker2.hours); 
+console.log(worker2.getSalary());
 
-let worker1 = new Worker('Mihai', 'Crihan', 24, 433); 
-let worker2 = new Worker('Petru', 'Fanranume', 8, 80); 
+if(worker1.getSalary() > worker2.getSalary()){
+	console.log(worker1.name + ' are mai mult ca ' + worker2.name + 'cu ' + (worker1.getSalary()-worker2.getSalary()));
+} else {
+	console.log(worker2.name + ' are mai mult ca ' + worker1.name + 'cu ' + (worker2.getSalary()-worker1.getSalary()));
+}
 
 
 
-
-
-worker.getSalary();
+// worker.getSalary();
 
 
 
